@@ -68,9 +68,7 @@ public class ColorDAOJDBCImpl implements ColorDAO {
     	}
 
         return colors;
-        
-   
-        
+             
     }
 
     @Override
