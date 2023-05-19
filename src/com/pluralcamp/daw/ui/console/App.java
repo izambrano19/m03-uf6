@@ -12,6 +12,8 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
     	
+    	System.out.println("JDBC");
+    	
     	Scanner stdin = new Scanner(System.in);
     	
     	ColorDAOJDBCImpl colorDAOJDBC = new ColorDAOJDBCImpl();

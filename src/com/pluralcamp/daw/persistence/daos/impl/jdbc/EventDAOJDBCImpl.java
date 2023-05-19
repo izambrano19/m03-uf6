@@ -31,4 +31,22 @@ public class EventDAOJDBCImpl implements EventDAO {
     public List<Event> getEvents(String searchTerm, int offset, int count) throws DAOException {
         return null;
     }
+
+	@Override
+	public List<Event> getEvents(boolean visible, String searchTerm) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Event> getCurrentWeekEvents() throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Event> getCurrentMonthEvents() throws DAOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

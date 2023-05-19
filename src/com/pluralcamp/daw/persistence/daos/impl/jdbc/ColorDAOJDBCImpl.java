@@ -55,18 +55,17 @@ public class ColorDAOJDBCImpl implements ColorDAO {
     	try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/calendar?serverTimezone=Europe/Paris", "ismael", "12345678");
     		 CallableStatement sentSQL = connection.prepareCall("CALL getColors()");
     		 ResultSet reader = sentSQL.executeQuery()){
+    		
 	    		while(reader.next()) {
 	    			var color = new Color(reader.getString("name"),reader.getInt("red"), reader.getInt("green"), reader.getInt("blue"));
 	    			color.setId(reader.getLong("id"));
 	    			colors.add(color);
-	    			
 	    		}
-    		}
+	    }
     	catch(SQLException ex){
     		throw new DAOException(ex);
     		
     	}
-
 
         return colors;
         
